@@ -9,18 +9,148 @@
  * https://ionicframework.com/docs/layout/global-stylesheets
  */
 
+
 /* Core CSS required for Ionic components to work properly */
+
 @import "~@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
+
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
 @import '~@ionic/angular/css/display.css';
 
 /* Optional CSS utils that can be commented out */
+
 @import "~@ionic/angular/css/padding.css";
 @import "~@ionic/angular/css/float-elements.css";
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+#container {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#container strong {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+#container p {
+    font-size: 16px;
+    line-height: 22px;
+    color: #8c8c8c;
+    margin: 0;
+}
+
+#container a {
+    text-decoration: none;
+}
+
+
+/***************** CSS PROPIO *****************/
+
+//DISEÑO DE LOS BOTONES
+.btnCeleste {
+    --color: white;
+    --background: #00A1FD;
+}
+
+.btnDer {
+    float: right;
+}
+
+.styleToolBar {
+    --color: #00A1FD;
+    --background: linear-gradient(197deg, rgb(0, 58, 146) 0%, rgb(84, 157, 216) 13.5%, rgb(144, 197, 211) 33.33%, rgb(255, 255, 255) 100%) !important;
+}
+
+.margenTop40 {
+    margin-top: 40px;
+}
+
+.margenTop20 {
+    margin-top: 20px;
+}
+
+.margenTop10 {
+    margin-top: 10px;
+}
+
+.styleInput {
+    background: rgb(245, 240, 240);
+    border: 1px solid #8f8b8b;
+    border-radius: 5px 5px 5px 5px;
+    width: 80%;
+    font-size: 2vw;
+    padding: 5px;
+    color: black;
+    margin: 5px auto;
+}
+
+.colorBlack {
+    color: black;
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+.colorTitle {
+    color: white;
+    font-weight: bold;
+    font-size: 6vw;
+}
+
+.colorSubTitle {
+    color: white;
+    font-weight: bold;
+    font-size: 5vw;
+}
+
+.colorGray {
+    color: gray;
+    font-weight: bold;
+    font-size: 4vw;
+}
+
+.colorGray3VW {
+    color: gray;
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+.centerImg {
+    width: 60%;
+    margin: 0px auto;
+}
+
+.centerImgMas {
+    width: 100%;
+    margin: 0px auto;
+}
+
+.cardLogeo {
+    //Diseño del CARD de LOGEO
+    width: 40%;
+    height: auto;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.centrar {
+    display: flex;
+    justify-content: center;
+}
+
+.fondo {
+    background: darkgreen;
+}
+
+.bg-class {
+    --background: linear-gradient(197deg, rgb(0, 58, 146) 0%, rgb(84, 157, 216) 13.5%, rgb(144, 197, 211) 33.33%, rgb(255, 255, 255) 100%) !important;
+}

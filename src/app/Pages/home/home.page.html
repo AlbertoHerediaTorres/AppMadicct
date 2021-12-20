@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+
+</ion-header>
+
+<ion-content [fullscreen]="true" class="bg-class">
+    <ion-header collapse="condense">
+
+    </ion-header>
+
+    <ion-grid class="margenTop40">
+        <ion-row class="centrar absolute animated fadeIn">
+            <img src="assets/img/img5.jpeg" width="20%" />
+        </ion-row>
+
+        <ion-row class="margenTop20">
+            <ion-card class="animated fadeIn cardLogeo">
+                <ion-card-content>
+                    <form [formGroup]="form" class="margenTop10">
+                        <ion-label class="colorBlack">Usuario</ion-label>
+                        <ion-input class="styleInput centrar" formControlName="user" #usuario></ion-input>
+                        <br>
+                        <ion-label class="colorBlack">Contraseña</ion-label>
+
+                        <ion-input class="styleInput centrar" formControlName="pass" matNaviteControl [type]="hide ? 'password' : 'text'" #contra></ion-input>
+                        <ion-button class="btnCeleste" mat-icon-button matSuffix (click)="eventoBtnVer()" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                            <ion-icon class="centrar" name="{{nameIcon}}"></ion-icon>
+                        </ion-button>
+
+                        <ion-button class="btnDer btnCeleste" (click)="logueo()">Acceder</ion-button>
+                    </form>
+                </ion-card-content>
+            </ion-card>
+        </ion-row>
+    </ion-grid>
+</ion-content>

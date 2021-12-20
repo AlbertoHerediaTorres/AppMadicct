@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-toolbar class="styleToolBar">
+        <img src="assets/img/img6.jpg" width="5%" style="margin-left: 25px;" />
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-class">
+    <form class="marginRegistro">
+
+        <ion-label class="colorBlack">Nombre:</ion-label>
+        <ion-input class="styleInput" formControlName="nombre" #nombre></ion-input>
+        <br>
+
+        <ion-label class="colorBlack">Ingresa la cantidad:</ion-label>
+        <ion-input class="styleInput" formControlName="pass" #cantidad></ion-input>
+        <br>
+
+        <br>
+
+        <ion-button class="btnVerde" (click)="registro()">Confirmar registro</ion-button>
+    </form>
+
+</ion-content>
