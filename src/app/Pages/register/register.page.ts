@@ -11,19 +11,18 @@ export class RegisterPage {
 
   form : FormGroup;
 
-  constructor(private router : Router, private formBuilder: FormBuilder) {
+  constructor(private router : Router) {
 
-    this.form = this.formBuilder.group ({
-      nombre: ['', [Validators.required]],
-      cantidad: ['', Validators.required],
-    });
    }
 
 
-n
   public registro() { // Método para el botón de Registro
 
 
+  }
+
+  public volver(){
+    this.router.navigate(['/logo']);
   }
 
 }

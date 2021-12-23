@@ -88,7 +88,7 @@
     border: 1px solid #8f8b8b;
     border-radius: 5px 5px 5px 5px;
     width: 80%;
-    font-size: 2vw;
+    font-size: 4vw;
     padding: 5px;
     color: black;
     margin: 5px auto;
@@ -97,7 +97,7 @@
 .colorBlack {
     color: black;
     font-weight: bold;
-    font-size: 2vw;
+    font-size: 4vw;
 }
 
 .colorTitle {
@@ -115,7 +115,7 @@
 .colorGray {
     color: gray;
     font-weight: bold;
-    font-size: 4vw;
+    font-size: 3vw;
 }
 
 .colorGray3VW {
@@ -153,4 +153,14 @@
 
 .bg-class {
     --background: linear-gradient(197deg, rgb(0, 58, 146) 0%, rgb(84, 157, 216) 13.5%, rgb(144, 197, 211) 33.33%, rgb(255, 255, 255) 100%) !important;
+}
+
+.btnIcon {
+    width: 100%;
+    float: right;
+}
+
+.imgToolBar {
+    height: 50px;
+    width: 50px;
 }

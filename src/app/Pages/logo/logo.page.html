@@ -1,25 +1,16 @@
 <ion-header>
     <ion-toolbar class="styleToolBar">
-        <img src="assets/img/img6.jpg" width="5%" style="margin-left: 25px;" />
+        <img src="assets/img/img6.jpg" class="imgToolBar" style="margin-left: 25px;" />
+        <ion-button class="btnCeleste btnDer" mat-icon-button matSuffix width="50%" (click)="registrarPersona()">
+            <ion-icon class="centrar" name="person-add"></ion-icon>
+        </ion-button>
+
     </ion-toolbar>
 </ion-header>
 
 <ion-content class="bg-class">
     <ion-row>
-
-        <ion-col size="3" class="margenTop20">
-            <ion-card class="animated fadeIn centerImg" width="80%">
-                <img src="assets/img/img7.png" class="centerImg centrar" />
-
-
-                <ion-card-content class="colorGray3VW centrar">
-                    <ion-button (click)="registrarPersona()">Añadir</ion-button>
-                </ion-card-content>
-            </ion-card>
-        </ion-col>
-
-
-        <ion-col size="3" class="margenTop20">
+        <ion-col size="4" class="margenTop20">
             <ion-card class="animated fadeIn centerImg" width="80%">
                 <img src="assets/img/img6.jpg" class="centerImg centrar" />
                 <ion-card-header>
@@ -27,7 +18,7 @@
                 </ion-card-header>
 
                 <ion-card-content class="colorGray3VW centrar">
-                    <ion-label>Dinero</ion-label>
+                    <ion-label class="colorGray">Dinero</ion-label>
                     <br>
                 </ion-card-content>
             </ion-card>
