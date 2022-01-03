@@ -4,21 +4,20 @@
         <ion-button class="btnCeleste btnDer" mat-icon-button matSuffix width="50%" (click)="registrarPersona()">
             <ion-icon class="centrar" name="person-add"></ion-icon>
         </ion-button>
-
     </ion-toolbar>
 </ion-header>
 
 <ion-content class="bg-class">
     <ion-row>
-        <ion-col size="4" class="margenTop20">
+        <ion-col size="4" class="margenTop20" *ngFor="let p of personas, let i = index">
             <ion-card class="animated fadeIn centerImg" width="80%">
                 <img src="assets/img/img6.jpg" class="centerImg centrar" />
                 <ion-card-header>
-                    <ion-card-title class="colorBlack centrar">Nombre</ion-card-title>
+                    <ion-card-title class="colorBlack centrar">{{p.nombre}}</ion-card-title>
                 </ion-card-header>
 
                 <ion-card-content class="colorGray3VW centrar">
-                    <ion-label class="colorGray">Dinero</ion-label>
+                    <ion-label class="colorGray">{{p.dinero}} €</ion-label>
                     <br>
                 </ion-card-content>
             </ion-card>

@@ -8,18 +8,21 @@
 </ion-header>
 
 <ion-content class="bg-class">
-    <form class="marginRegistro">
+    <form class="marginRegistro" [formGroup]="form">
 
         <ion-label class="colorBlack">Nombre:</ion-label>
-        <ion-input class="styleInput"></ion-input>
+        <ion-input class="styleInput" formControlName="nombre" #nombre></ion-input>
         <br>
 
         <ion-label class="colorBlack">Ingresa la cantidad:</ion-label>
-        <ion-input class="styleInput"></ion-input>
-        <br>
+        <ion-input class="styleInput" formControlName="dinero" #dinero></ion-input>
         <br>
 
-        <ion-button class="btnCeleste" (click)="registro()">Confirmar registro</ion-button>
+        <ion-label class="colorBlack">{{fecha}}</ion-label>
+
+        <br>
+
+        <ion-button class="btnCeleste" (click)="registro(nombre.value, dinero.value)">Confirmar registro</ion-button>
     </form>
 
 </ion-content>
