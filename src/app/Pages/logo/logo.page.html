@@ -9,16 +9,24 @@
 
 <ion-content class="bg-class">
     <ion-row>
-        <ion-col size="4" class="margenTop20" *ngFor="let p of personas, let i = index">
+        <ion-col size="3" class="margenTop20" *ngFor="let p of personas, let i = index">
             <ion-card class="animated fadeIn centerImg" width="80%">
                 <img src="assets/img/img6.jpg" class="centerImg centrar" />
                 <ion-card-header>
                     <ion-card-title class="colorBlack centrar">{{p.nombre}}</ion-card-title>
                 </ion-card-header>
 
-                <ion-card-content class="colorGray3VW centrar">
+                <ion-card-subtitle class="colorGray3VW centrar">
                     <ion-label class="colorGray">{{p.dinero}} €</ion-label>
-                    <br>
+                </ion-card-subtitle>
+
+                <ion-card-content class="colorGray3VW centrar">
+                    <ion-button class="btnCeleste1 btnDer" trash-outline matSuffix (click)="verPersona(i)">
+                        <ion-icon name="create-outline"></ion-icon>
+                    </ion-button>
+                    <ion-button class="btnDanger btnDer" color="danger" trash-outline matSuffix (click)="eliminar(i)">
+                        <ion-icon name="trash-outline"></ion-icon>
+                    </ion-button>
                 </ion-card-content>
             </ion-card>
         </ion-col>

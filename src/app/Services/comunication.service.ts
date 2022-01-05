@@ -18,4 +18,14 @@ export class ComunicationService {
    public registerPersona(persona : Persona){ //REGISTRA A UNA NUEVA PERSONA
     return this.httpCliente.post<Persona>(`${this.url}insertarPersona.php`, JSON.stringify(persona));
    }
+
+   public eliminarPersona(persona : Persona){ // ELIMINA A LAS PERSONAS
+    return this.httpCliente.post<Persona>(`${this.url}eliminarPersona.php`, JSON.stringify(persona));
+   }
+
+   public editarDatosUsuario(persona : Persona, idPersona : Number){ // EDITA LOS DATOS PERSONA
+    return this.httpCliente.post<Persona>(`${this.url}editarPersona.php?id=`+idPersona, JSON.stringify(persona));
+   }
+
+
 }

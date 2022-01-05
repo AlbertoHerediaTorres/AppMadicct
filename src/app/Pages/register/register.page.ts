@@ -1,3 +1,4 @@
+import { DataService } from './../../Services/data.service';
 import { Persona } from './../../Class/persona';
 import { ComunicationService } from 'src/app/Services/comunication.service';
 import { Component, OnInit } from '@angular/core';
@@ -15,18 +16,24 @@ export class RegisterPage implements OnInit {
   dia: Date;
   fecha : String;
 
-  constructor(private router : Router, private comunicacion : ComunicationService, private datePipe: DatePipe) {
+  logueoOk : boolean;
+
+  constructor(private router : Router, private comunicacion : ComunicationService, private datePipe: DatePipe, private data: DataService) {
 
     this.form = new FormGroup ({
       nombre : new FormControl('',[Validators.required, Validators.minLength(1)]),
       dinero : new FormControl('',[Validators.required, Validators.minLength(1)])
     });
 
+    this.comprobarLogueo();
+
    }
 
    ngOnInit() {
 
     this.obtenerDia();
+
+
 
 
   }
@@ -65,6 +72,15 @@ export class RegisterPage implements OnInit {
 
 
   }
+
+  comprobarLogueo(){
+    this.logueoOk = this.data.logueoOk;
+
+    if(this.logueoOk != true){
+      this.router.navigate(['/home']);
+    }
+  }
+
 
   public obtenerDia(){
     var d = new Date();
