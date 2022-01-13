@@ -1,3 +1,4 @@
+import { Movimiento } from './../Class/movimiento';
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 import { Persona } from '../Class/persona';
@@ -27,5 +28,15 @@ export class ComunicationService {
     return this.httpCliente.post<Persona>(`${this.url}editarPersona.php?id=`+idPersona, JSON.stringify(persona));
    }
 
+   public registerMovimiento(movimiento : Movimiento){ //REGISTRA UN NUEVO MOVIMIENTO
+    return this.httpCliente.post<Movimiento>(`${this.url}insertarMovimiento.php`, JSON.stringify(movimiento));
+   }
 
+   public obtenerMovimientos(idPersona : Number){ //OBTIENE TODOS LOS MOVIMIENTOS DE LA PERSONA
+    return this.httpCliente.get<Movimiento[]>(`${this.url}obtenerMovimientos.php?id=`+idPersona);
+   }
+
+   public eliminarMovimiento(movimiento : Movimiento){ // ELIMINA A LAS PERSONAS
+    return this.httpCliente.post<Movimiento>(`${this.url}eliminarMovimientos.php`, JSON.stringify(movimiento));
+   }
 }

@@ -74,6 +74,12 @@
     width: 50%;
 }
 
+.btnDanger1 {
+    --color: white;
+    --background: red;
+    width: 10%;
+}
+
 .btnDer {
     float: right;
 }
@@ -155,6 +161,14 @@
 .cardLogeo {
     //Diseño del CARD de LOGEO
     width: 40%;
+    height: auto;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.cardLogeo1 {
+    //Diseño del CARD de LOGEO
+    width: 60%;
     height: auto;
     margin: 0px auto;
     text-align: center;

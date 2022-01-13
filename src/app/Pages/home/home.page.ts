@@ -34,7 +34,6 @@ export class HomePage {
 
     });
 
-
     this.hide = true;
     this.nameIcon  = 'eye-outline';
 
@@ -54,14 +53,13 @@ export class HomePage {
 
 logueo(){
 
-  if(this.form.value.user == this.nombreUsuario || this.form.value.pass == this.cntra){
+  if(this.form.value.user == this.nombreUsuario && this.form.value.pass == this.cntra){
     this.logueoOk = true;
     this.data.setLogueoOk(this.logueoOk);
     this.router.navigate(['/logo']);
   } else {
     this.presentAlert();
   }
-
 
 
 }
